@@ -131,18 +131,12 @@ public class Main {
                     break;
 
                 case 6:
-                    List<List<Card>> pointsList = new ArrayList<List<Card>>();
-                    List<Card> currentPointList = null;
-                    for (Card carta : cards.Values()) {
-                        //mi idea es por cada tipo de carta añadir esa carta a una lista temporal
-                        //esa lista temporal meterla adentro de otra lista para tener en orden las cartas por tipo
-                    }
 
-                    //y luego por cada lista de cartas que hayan imprimir la carta
-                    for(List<Card> lista: pointsList){
-                        for(Card carta: lista){
-                            System.out.println(carta);
-                        }
+                    //lista por tipo
+                    ArrayList<Card> c = new ArrayList<>(cards.Values());
+                    c.sort(new CompareCards());
+                    for (Card ca : c) {
+                        System.out.println(ca.toString());
                     }
 
                     break;
