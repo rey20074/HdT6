@@ -101,7 +101,12 @@ public class Main {
                     for(String s: userCards.KeySet()){
                         System.out.println("\nNombre: " + s + "\nTipo: " + userCards.Get(s).getType() + "\nCantidad: " + userCards.Get(s).getCount());
                     }
-                    break;
+                    //metodo mas corto para imprimir las cartas del usuario
+                    /*
+                    for (Card carta : userCards.Values()) {
+                        System.out.println(carta);
+                    }
+                    break;*/
 
                 case 4:
 
