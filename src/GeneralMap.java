@@ -1,4 +1,5 @@
 import java.util.Collection;
+import java.util.Map;
 import java.util.Set;
 
 public interface GeneralMap<K,O> {
@@ -13,5 +14,4 @@ public interface GeneralMap<K,O> {
     public int Size();
     public boolean ContainsKey(K key);
     public Collection<O> Values();
-
 }

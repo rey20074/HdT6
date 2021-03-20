@@ -53,4 +53,5 @@ public class NewHashMap<K,O> extends HashMap<K, O> implements GeneralMap<K,O> {
     public Collection<O> Values() {
         return values();
     }
+
 }

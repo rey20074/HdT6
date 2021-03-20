@@ -2,6 +2,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.lang.reflect.Array;
 import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Set;
 
 public class Main {
 
@@ -21,7 +24,7 @@ public class Main {
         cards = factory.getMap(ans.toUpperCase());
 
         try {
-            File myObj = new File("C:\\Users\\juanc\\OneDrive\\Escritorio\\UVG\\Tareas\\Algoritmos y estructura de Datos\\Hoja de Trabajo 6\\src\\cards.txt");
+            File myObj = new File("src/cards.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
@@ -55,7 +58,7 @@ public class Main {
                 try {
                     choice = sc.nextInt();
                     sc.nextLine();
-                    if (choice > 6 || choice < 1) {
+                    if (choice > 7 || choice < 1) {
                         System.out.println("\nPor favor ingrese un valor correcto.");
                     } else {
                         ask = false;
@@ -79,6 +82,7 @@ public class Main {
                         } else {
                             userCards.Get(name).setCount(1);
                         }
+                        System.out.println("Nombre de la carta ingresado con exito");
                     } else {
                         System.out.println("\nEl nombre de la carta que ha ingresado no se encuentra en la base de datos.");
                     }
@@ -113,6 +117,33 @@ public class Main {
                             System.out.println(ca.toString());
                         }
                     }
+                    break;
+
+                case 5:
+                    for (Card carta : cards.Values()) {
+                        System.out.println(carta);
+                    }
+                    //for(String key : cards.KeySet()) {
+                    //    System.out.println("\nThe key is: " + key + ",value is :" + cards.Get(key));
+                    //}
+                    break;
+
+                case 6:
+                    List<List<Card>> pointsList = new ArrayList<List<Card>>();
+                    List<Card> currentPointList = null;
+                    for (Card carta : cards.Values()) {
+                        //mi idea es por cada tipo de carta añadir esa carta a una lista temporal
+                        //esa lista temporal meterla adentro de otra lista para tener en orden las cartas por tipo
+                    }
+
+                    //y luego por cada lista de cartas que hayan imprimir la carta
+                    for(List<Card> lista: pointsList){
+                        for(Card carta: lista){
+                            System.out.println(carta);
+                        }
+                    }
+
+                    break;
 
                 case 7:
                     body = false;
