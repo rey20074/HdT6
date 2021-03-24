@@ -28,7 +28,7 @@ public class Main {
             //complejidad del Hashmap
             int i=0;
 
-            while (myReader.hasNextLine()&&i<8000) {
+            while (myReader.hasNextLine()&&i<9000) {
                 String data = myReader.nextLine();
                 String name = data.split("\\|")[0];
                 String type = data.split("\\|")[1];
