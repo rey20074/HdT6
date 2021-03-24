@@ -26,16 +26,15 @@ public class Main {
             Scanner myReader = new Scanner(myObj);
 
             //complejidad del Hashmap
-            for(int i=0;i>500;i++){
-                
-            }
+            int i=0;
 
-            while (myReader.hasNextLine()) {
+            while (myReader.hasNextLine()&&i<8000) {
                 String data = myReader.nextLine();
                 String name = data.split("\\|")[0];
                 String type = data.split("\\|")[1];
                 Card card = new Card(name, type);
                 cards.Put(name, card);
+                i++;
             }
             
             myReader.close();
