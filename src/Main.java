@@ -5,6 +5,7 @@ import java.util.*;
 
 public class Main {
 
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -23,6 +24,12 @@ public class Main {
         try {
             File myObj = new File("src/cards.txt");
             Scanner myReader = new Scanner(myObj);
+
+            //complejidad del Hashmap
+            for(int i=0;i>500;i++){
+                
+            }
+
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 String name = data.split("\\|")[0];
@@ -30,6 +37,7 @@ public class Main {
                 Card card = new Card(name, type);
                 cards.Put(name, card);
             }
+            
             myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
@@ -122,9 +130,11 @@ public class Main {
                     break;
 
                 case 5:
+
                     for (Card carta : cards.Values()) {
                         System.out.println(carta);
                     }
+
                     //for(String key : cards.KeySet()) {
                     //    System.out.println("\nThe key is: " + key + ",value is :" + cards.Get(key));
                     //}
